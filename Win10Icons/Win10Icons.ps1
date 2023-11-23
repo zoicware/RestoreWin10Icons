@@ -35,7 +35,7 @@ start explorer.exe
   }
   elseif($option -eq 2){
   $win11icons = $null
-  #$win11icons = Get-ChildItem -Path C:\ -Filter imageres11.dll.mun -Recurse -ErrorAction SilentlyContinue -Force |select-object -first 1 | % { $_.FullName; }
+  $win11icons = Get-ChildItem -Path C:\ -Filter imageres11.dll.mun -Recurse -ErrorAction SilentlyContinue -Force |select-object -first 1 | % { $_.FullName; }
   if($win11icons -eq $null){
   Write-Host "UNABLE TO FIND WIN11 ICON FILE, SELECT THE BACKUP"
 
